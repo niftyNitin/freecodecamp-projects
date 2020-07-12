@@ -30,6 +30,6 @@ def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
             if balls.count(color) >= expected_balls[color]:
                 num_correct += 1
         if num_correct == len(expected_balls):
-            successes += 1
+            success += 1
     probability = float(success) / num_experiments
     return probability
