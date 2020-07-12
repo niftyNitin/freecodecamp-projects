@@ -21,16 +21,15 @@ class Hat:
 
 
 def experiment(hat, expected_balls, num_balls_drawn, num_experiments):
-    successes = 0
+    success = 0
     for _ in range(num_experiments):
-        exp_hat = copy.deepcopy(hat)
-        balls = exp_hat.draw(num_balls_drawn)
-        num_of_correct_colors = 0
+        exp = copy.deepcopy(hat)
+        balls = exp.draw(num_balls_drawn)
+        num_correct = 0
         for color in expected_balls.keys():
             if balls.count(color) >= expected_balls[color]:
-                num_of_correct_colors += 1
-        if num_of_correct_colors == len(expected_balls):
+                num_correct += 1
+        if num_correct == len(expected_balls):
             successes += 1
-    probability = float(successes) / num_experiments
+    probability = float(success) / num_experiments
     return probability
-
