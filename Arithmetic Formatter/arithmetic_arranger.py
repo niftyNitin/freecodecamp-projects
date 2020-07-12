@@ -36,8 +36,8 @@ def arithmetic_arranger(problems, solutions=False):
             line3 += "    "
             line4 += "    "
 
-    vertical_problems = line1 + "\n" + line2 + "\n" + line3
+    edited_problems = line1 + "\n" + line2 + "\n" + line3
     if solutions:
-        vertical_problems += "\n" + line4
+        edited_problems += "\n" + line4
 
-    return vertical_problems
+    return edited_problems
